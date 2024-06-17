@@ -1,0 +1,130 @@
+.homePage {
+  display: flex;
+  z-index: 2;
+}
+
+.infoSectionLeft,
+.infoSectionRight {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.infoSectionLeft {
+  flex: 1.5;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.buttons {
+  flex: 0.2;
+  display: flex;
+  column-gap: var(--xl);
+}
+
+.buttons:nth-of-type(1) {
+  margin: var(--sm) 0 var(--lg) 0;
+}
+
+.name,
+.paragraph,
+.title {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  color: var(--brightBlue);
+}
+
+
+.button {
+  background-color: var(--main);
+  color: var(--brightBlue);
+  border: 2px solid var(--brightBlue);
+  border-radius: var(--md);
+  font-size: var(--md);
+  order: 0;
+  width: 10vw;
+  order: 1;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+  align-self: center;
+  height: 7vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  outline: var(--brightBlue) 2px solid;
+  outline-offset: -7px;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  width: calc(10px + 1vw);
+  height: calc(4rem + 20vh);
+  background-color: var(--brightBlue);
+
+  animation: animate 4s linear infinite;
+}
+.box {
+  flex: 1;
+  align-self: flex-start;
+  height: 5.2vh;
+  background-color: var(--main);
+  border-radius: var(--sm);
+  position: relative;
+  top: -12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(70deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(250eg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button:hover > .box {
+  background: var(--brightBlue);
+}
+.button:hover {
+  color: var(--main);
+  background: var(--brightBlue);
+  transform: scale(1.1);
+}
+
+.social {
+  width: 2.5vw;
+  background: var(--main);
+  border: 2px solid var(--brightBlue);
+  outline: none;
+  height: 2.5vw;
+  align-self: end;
+  padding: 5px;
+}
+.linkSocial {
+  width: 2.5vw;
+  height: 2.5vw;
+  align-self: end;
+}
+
+.Image {
+  width: 100%;
+  align-self: center;
+  border-radius: var(--lg);
+}
